@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Statistic extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'link_id',
+        'accessed_at',
+    ];
 }

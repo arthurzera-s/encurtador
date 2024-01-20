@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('link_id')->constrained()->cascadeOnDelete();
+            $table->timestamp('accessed_at');
             $table->timestamps();
         });
     }
